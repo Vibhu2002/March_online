@@ -1,0 +1,17 @@
+1 git is a version control system , which help to save and track records
+  it is a software which is in our system
+
+
+
+    
+
+
+
+
+        command lines 
+                 git init --- for initialization
+                  git add filename /foldername/path /.(for all files )
+                  git commit -m "delivery msg" // commiting 
+                  git remote add origin  githublink --- one time -- providing path 
+                   git push origin branch name ----- pushing code
+                   git status ---- checking status 
