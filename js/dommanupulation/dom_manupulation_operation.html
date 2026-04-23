@@ -15,28 +15,28 @@
 
     </div>
     <script>
-       let container =  document.getElementById('container');
-       let paragraph = document.createElement('p');
-       paragraph.innerHTML="<b> Document objects model</b>";
-       paragraph.style.color='red';
-              container.append(paragraph);
+    //    let container =  document.getElementById('container');
+    //    let paragraph = document.createElement('p');
+    //    paragraph.innerHTML="<b> Document objects model</b>";
+    //    paragraph.style.color='red';
+    //           container.append(paragraph);
 
-              //how to remove element from the browser
-              let removed= document.querySelector('#removed');
-              console.log(removed);
+    //           //how to remove element from the browser
+    //           let removed= document.querySelector('#removed');
+    //           console.log(removed);
 
-              removed.removeChild
-              container.removeChild(removed);  
+    //           removed.removeChild
+    //           container.removeChild(removed);  
               
               
-                let heading2 =document.createElement('h2');
-      heading2.innerHTML='heading2';
-     // container.append(heading2); //
-        container.prepend(heading2);// it will add at starting in the container
+    //             let heading2 =document.createElement('h2');
+    //   heading2.innerHTML='heading2';
+    //  // container.append(heading2); //
+    //     container.prepend(heading2);// it will add at starting in the container
 
-       let heading3 = document.createElement('h3');
-       heading3.innerHTML='heading 3 '
-       container.insertBefore(heading3,paragraph);//this will add before paragraph tag
+    //    let heading3 = document.createElement('h3');
+    //    heading3.innerHTML='heading 3 '
+    //    container.insertBefore(heading3,paragraph);//this will add before paragraph tag
 
        let oldText = document.querySelectorAll('#replace');
       let newText = document.createElement('p');
@@ -44,9 +44,9 @@
       container.replaceChild(newText,oldText[0])
 
 
-      let cloned = document.getElementById('cloned');
-     let newCloned= cloned.cloneNode(true);
-        container.insertBefore(newCloned,cloned);
+    //   let cloned = document.getElementById('cloned');
+    //  let newCloned= cloned.cloneNode(true);
+    //     container.insertBefore(newCloned,cloned);;
     </script>
 </body>
 </html>
