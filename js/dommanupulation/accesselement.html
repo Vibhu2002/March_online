@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>access element</title>
+</head>
+<body>
+    <p id="p"></p>
+    <h1></h1>
+    <h1></h1>
+    <h2>this is h2</h2>
+
+    <div class="div"></div>
+    <div class="div1"></div>
+
+    <script>
+        let p = document.getElementById('p');
+        console.log(p);
+      let h1=   document.getElementsByTagName('h1');
+        console.log(h1);//html collection   [h1, h1]
+        
+         let div=document.getElementsByClassName('div1');
+         console.log(div);//[div.div1]
+//it will  find selector 1st matching 
+       let classSelector=   document.querySelector('.p1')
+      console.log(classSelector);
+      //it result all matching selectors
+          let classSelectorAll =   document.querySelectorAll('p1')
+      console.log(classSelectorAll);
+
+    
+
+         
+    </script>
+</body>
+</html>

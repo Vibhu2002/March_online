@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promisesTask</title>
+</head>
+<body>
+    <script>
+        //1st  pending 2. fulfilled/success 3.failure/rejected
+let result = fetch('https://jsonplaceholder.typicode.com/users');//backend api
+console.log(result);
+
+//handling a promise through then and catch
+
+// result
+// .then((res)=>{
+//     console.log(res);
+//  return res.json();
+// })
+// .then((user)=>{
+//     console.log(user);
+// })
+// .catch((Error)=>{
+//     console.log(error);
+// })
+
+
+// ignoring .then and catch we can use async and await 
+
+
+
+async function fetchdata() {
+    let res = await fetch('https://jsonplaceholder.typicode.com/users');
+    let users = await res.json();
+    console.log(users);
+}
+fetchdata();
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

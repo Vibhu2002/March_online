@@ -1,0 +1,203 @@
+
+
+
+
+find last ()--> predicate function 
+callback function 
+helps to filter data and retruns last matching result 
+resturns a single value 
+
+
+syntax :
+  arr.findLAst(
+    (value,index,arr)=>{
+        return condition
+    }
+  )
+
+
+
+  every()====Predicate function 
+  it is a callback function 
+  helps to filter data and retruns a boolean result 
+  all values are satsifying with the condition it returns true or elae return false 
+  return a boolean value
+
+Syntax:
+  arr.every(
+    (value,index,arr)=>{
+        retrun conditiojn;
+    }
+  )
+
+  some()==Predicate function
+  it is a callback function 
+  it helps to filter data and returns a boolean result 
+  if some are the values are satsifying with the condition it returns true 
+  if none of the values are not satsifying with the condition it return false
+  it retruns a boolean value 
+
+
+  Syntax:
+     arr.some(
+        (value,index,arr)=>{
+            returns acondition;        }
+     )
+
+     reduce ():
+       it is a callback function
+       it returns a single value by performing operation on each element of an array
+       syntax:
+         arr.reduce(callback,initialvalue)
+
+         function callback (accumulator ,currentvalue,currentINdex,array){
+          return accumulator
+         }
+        
+
+        accumulator is used to store calue/result of operation
+        accumulator and currnetvalue are mandatory is callback
+
+        ============================================
+        reverse()
+        it helps to  reverse array 
+        it will modify input array adn returns new reversed array 
+        Syntax:
+        arr.reverse()
+        =======================
+        splice():
+         it helps to delete and modify the data in the array 
+
+         it won't effect input / original array 
+
+
+         arr.splice(StartindexPosition,deletecount,updatevalue,,,,,,,,,);
+
+
+         arr.splice(StartIndex)==it will start deleting from index position to end 
+
+         arr.splice(StartindexPosition,deletecount)==> from index position,it delete values based on count
+         arr.splice(startIndex,DeleteCount,UpdateValue[])--
+         it deletes the data,
+         in teh placae of  deleted data,it adds new data /updated data 
+
+
+
+         ========================
+         slice()
+         ---------
+            1: it helps to extract/provide shallow compy from original array
+            2: it won't modified input array 
+            it returns a new array (shallow copy)
+            syntax:
+             arr.slice(startIndex)---fromstart index to end ,it tries to extract
+             arr.slice(startIndex,endIndex)-it extract from start INdex to endIndex 
+
+
+             note atartIndex--Inclusive
+             endIndex--Exclusice
+
+String---
+
+
+    it is collection of character
+
+    toString(): it convert array into string ,and each values can be join by ,(comma)
+
+ join(characters): it convert array into String ,and each valeus  can be join with specifc character 
+
+
+   padstart(Size,cahracter):can be join with specifunc based on size 
+  padend(size,character) : it helps to add character at ending of a string based on size
+
+
+  trim()--- remove white spaces 
+  trimStart()--remove whitespaces at start
+  trimEnd()--remove whitespaces at end 
+
+
+  repeat(count) ---> it repeat the string  based on count times
+   replace(searchvalue,replacevalue)---helps to replace a character
+   substring(startIndex,endIndex)--same like slice used to extract the string 
+   split(character,limit )-based on character,
+   it will divide string into multiple string and make as an array--based on limit
+    it retrusn those  many elements and it is optional
+
+
+
+
+pa
+
+
+
+
+
+indexof():
+
+
+
+
+
+
+
+
+
+
+last index():
+
+
+
+
+
+
+
+includes():
+
+
+
+
+
+it helps to find an element  in an array
+it element is presnt then it retruns true or else returns false 
+
+Syntax :
+arr.includes(element);
+
+
+
+
+
+
+fill():
+
+
+it helps to fill an element in an array 
+syntax:
+arr.fill(newValue)-->it will updates all  values in an array with new valeus
+arr.fill(new value ,startIndex)--> it will update new value from start index position
+arr.fill(newValue,startIndex,endIndex)->it willl updares newvalue from start to end 
+
+note startIndex--Inclusive
+endIndex-Exclusive
+
+sort():
+  it helps to sort  unorder data 
+  syntax:
+    strArr.sort()-->alphabetical order
+    arr.sort(comparefunction)--custom ordering 
+      
+       for ascending order:
+          arr.sort((a,b)=>a-b);
+
+
+       for descending order 
+        arr.sort((a,b)=>b-a);
+
+
+
+condition                      result 
+a-b<0                       a comes before b
+a-b>0                       b comes before a //swapping 
+a-b=0                         No change                      
+
+

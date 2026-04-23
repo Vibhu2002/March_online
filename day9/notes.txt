@@ -1,0 +1,90 @@
+// let marks = prompt("Enter the value ");
+//   if(marks>=90 && marks <=100){
+//     console.log("grade : A");
+
+//   }
+//   else  if (marks>=80&& mark <90){
+//     console.log("grade : B")
+//   }
+//     else  if (marks>=70&& mark <80){
+//     console.log("grade : c")
+//   }
+//     else  if (marks>=60&& mark <70){
+//     console.log("grade : d")
+//   }
+  
+
+
+
+
+  switch statement 
+    
+                     switch (value /variable/ data ){
+
+                        case 1 : ........ break;
+                        case 2 : ........ break;
+                        case 3 : ........ break;
+                        case 4 : ........ break;
+
+                        case 5 : ........ break;
+                        case 1 : ........ break;
+                        case 1 : ........ break;
+
+                        case 1 : ........ break;
+
+                        case n : break ;
+                          default :
+
+
+
+
+                     }
+
+                     note  break keyword is used for breaking the statement which help to break and interuppt the process
+                      default is a keyword if non of the case is not working then default keyword is executes
+
+                       one line of code curly braces is not needed (optional)
+                       for more then onev line {} are  mandatory 
+
+=================================================================================================
+looping statement
+ :- its used to execute a block of code multiple times until the conditions satisfy 
+   while looping
+   
+   
+   
+    do while loop 
+
+        while  loop                                                                     do while loop
+syntax    while(condition ){                                                                do {
+
+                                                                                            } while (condition){
+
+                                                                                            }
+
+            }
+    no of iteration   0                                                                      1
+
+
+                first check condition ,                                                       first executes  the code 
+                                                                                             then check  the condition 
+                then executes  the code                                                 
+
+
+
+
+
+
+   for loop 
+       for (declare and initialize ;condition ; updation ){
+
+       }
+
+
+
+   for of loop 
+   for in loop
+    for each loop 
+
+    
+

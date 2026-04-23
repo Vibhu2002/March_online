@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises 1</title>
+</head>
+<body>
+    <script>
+//promise is an object which is used to store data into k-v pair
+        // let p1= new Promise((resolve,reject)=>{
+        //     setTimeout(() => {
+        //         //console.log("this is  a prmise ");
+        //         return 'this is a promise'
+        //     }, 4000);
+
+
+        // });
+        // console.log(p1);
+
+        
+            function step1(){
+               return new Promise((resolve)=>{
+                setTimeout(() => {
+                     console.log('glass of water');
+                     resolve();
+                }, 5000);
+               })
+              
+
+            }
+
+            function step2(){
+               return new Promise((resolve)=>{
+                 setTimeout(() => {
+                    console.log('squeeze lemon into water ');
+                      resolve();
+                }, 3000);
+               })
+                
+            }
+
+            function step3(){
+              return new Promise((resolve)=>{
+                  setTimeout(() => {
+                     console.log('adding sugar ,salt,etc..');
+                       resolve();
+                }, 3000);
+               
+              })
+            }
+            function step4(){
+               return new Promise((resolve)=>{
+                 setTimeout(()=>{
+                    console.log('stir and drink the lemon soda and juice');
+                      resolve();
+                },6000);
+               })
+            }
+
+        //then and catch
+        // step1()
+        // .then(()=>step2())
+        // .then(()=>step3())
+        // .then(()=>step4())
+        // .catch(
+        //     (Error)=>{
+        //         console.log('error');
+        //     }
+        // )
+
+
+        //handling the promises using async and await 
+        async function prepareLemonjuice() {
+           try{
+             await step1();
+            await step2();
+            await step3();
+            await step4();
+           }catch(error){
+
+           }
+
+            
+        }
+        prepareLemonjuice();
+
+    </script>
+    
+</body>
+</html>

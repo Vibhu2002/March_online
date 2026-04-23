@@ -1,0 +1,124 @@
+dom manupulation:
+  Access Elements 
+  create Elements
+  Elements Manipulation(Adding removing replacing)
+  css Manipulation
+  event Manipulation/handling 
+
+
+
+  2:
+
+  Elements accessing :(Deals with document )
+    getElementbyID(id name)--retur single elemente based on id name (unique)
+    getElementbyClassname(classname)-=retruns muliple Elements  (html collection)
+    getElementbyTagname(tagname)
+   querySelector(queryname):return 1 st matchig result
+    querySelectorAll(queryname): returns all matching result
+ 
+
+3:Element manupulation
+ append()/appendChild()---adds elemmts at the end in a parent elemente
+ 2. prepend()====addd elements at the top in a parent element
+ 3. insertBefore(new Element ,existing element)-- adds element in a respective position 
+                                           based on element we are providing in 2nd argument 
+4. replaceChild(newText,oldText)--replace old elemt with new element in parent conatiner
+5. cloneNode() ====it helps to create an exact copu(cloned )
+
+
+Attribute manupulation
+======================
+       -modifying attribute by dom functions 
+       setAttribute()--adding attribute 
+       2. removeAttribute()-- remove attribute
+       3getAttribute()--accesing attribute
+       4. hasAttrtibute()--checking attribute is exist or not 
+
+
+5> css Manipulation
+       -----------------------
+       1.style- adding css (insline csss)
+       2. Classlist.add()--adding class
+       3.classList.remove()--removing  class
+       4.ClassList.toggle() toggling class --(on/off)
+       5.getComputedStyle()--accesing style
+
+6 > event  manupulation
+---------------------
+function: it is a block of code used to perform a specific task
+    it can be reusable 
+
+
+  event: it is an action occurs in browser  side 
+  :when event triggers it will call function to perform a task 
+  : used to handle user interactions 
+
+  examples 
+  1:mouse events === onclic, onDoubleClick , onMouse etc
+  2: keyboard events-on keyup ,onkeydown,onkeypress etc,,etc
+  3. form EVents ---onSubmit,onchange,onfocus,onblur etc;
+  4. window events--onLoad,onresize etc
+
+1. Adding events 
+ 1. inline :
+ <h1 onEventName="fucntionname()"></h1>
+
+
+ 2. event property 
+   let span = document.getElementbyID('div1');
+     span.onEventName=functionname();
+
+3. addEventListener();
+  let div = document.getElementbyID('div');
+    div.addEventListener('onEventName',functionname());
+    div.removeEventListner('Eventname',fucntionname());
+
+2. Removing event :
+  first we need to add event ., then only we can delete an event 
+
+  let div = document.getElementbyID('div');
+    div.addEventListener('Eventname',fucntionname);
+    div.removeEventListner('Eventname',functionname);
+
+3. Dispatch Event :
+used  to fire an event programatically 
+   dispatching an event means we manualy  trigger an event using js instead of waitng for the action
+    dispatchEvent(eventObject);
+
+4.
+Event Propogation:
+   the event will propogagate from child to parent
+   1.Event bubbling :
+   ---it will from child to parent 
+   this is default propogations
+   ex- button--->child--->parent
+
+   2.  Event Capturing/tricking 
+    it will propogagate form parent to  child 
+     in addEventListener() , we need true in 3rd argument
+      ex: parent---> child----> button
+
+  note : event.stoppropogation() is used to stop propogation 
+
+
+JQUERY
+++++++++++++++++
+    it is fast ,lightweight js library 
+    we can simplify html ,css,and js task 
+1. accessing /select element
+ $('tagname) //all tags 
+ $('#idname')  //id
+
+ 2. adding event
+
+ $('.classname').eventName(function);
+
+ 3. css Manipulation
+ $('tagname').css("property name","value ");
+
+ 4.Adding content 
+ ---------------------
+   $('tagname').text("text......");
+   $('tagname').html("<h1> text........ </h1>")
+
+

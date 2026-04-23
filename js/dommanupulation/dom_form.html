@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- create a form of two inputs 
+       1. validate with db crendetilas(Static data)
+       2. if username and password is correct then navigate to www.w3schools
+       3. id username or passwoprd is woring then we need to print messsage on browser
+    
+    
+    -->
+
+
+
+    <form action="#" id="form">
+        <input type="text" name="username"  id="username" placeholder="Enter User Name"><br><br>
+        <input type="password" name="password" id="password" placeholder="Enter password"><br><br>
+        <button type="submit">Login</button>
+
+    </form>
+
+    <script>
+        let username="Admin"
+        let password="Admin@123"
+
+        // function validateLogin(){
+        //     let name=document.getElementById('Username').value;
+        //     let pwd=document.getElementById('password').value;
+        //     console.log(name,pwd);
+        // }
+
+
+     let form =  document.getElementById("form");
+      form.addEventListener('submit',(event)=>{
+           event.preventDefault();//clicking on form no need to refresh your form ,stop reload the page 
+               let name=document.getElementById('username').value;
+            let pwd=document.getElementById('password').value;
+           console.log(name,pwd);
+
+
+          if (name === username) {
+             if(pwd===password) {
+             
+
+
+                 window.location.href='https://elearning.excelr.com/dashboard';
+
+             }else{
+                h2.innerHTML=' password is incoorect '
+             }
+          //  console.log("Validate");
+         
+
+            
+          }else{
+            h2.innerHTML = name+'is wrong please enter corrct username '
+      
+          }
+            // let h2=document.createElement('h2');
+         //   h2.innerHTML="Invalid credentials"
+             h2.style.color='red'
+            form.prepend(h2);
+            //console.log("Not validate ");
+            
+          
+
+})
+
+
+    </script>
+</body>
+</html>

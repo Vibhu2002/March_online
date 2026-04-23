@@ -1,0 +1,415 @@
+functions :
+=================
+        it is a block of code {}
+        creating a fumction once and use /call it multiple times 
+        - avoid code repeatiton 
+        improve the readablity of code 
+        easy to maintain and debug 
+          
+                 types of function 
+                 ====================================
+                              1 : 
+                              Argumented / parameterized function
+                                function functionName (arg1,arg2,........)
+                              2:
+                              No argumented function / non-parametrized function 
+                                
+                               syntax :
+
+                               function functionName(){
+                                //code 
+                               }
+
+
+
+
+
+
+
+
+
+                               2.. function Expression 
+                                   syntax:
+
+
+                                     let variable/fumctionreference = function(){
+
+                                     }
+                                     fumctionreference();// functioncaller
+
+==============================================
+                                     3.:
+
+                                     Arrow function
+                                     syntax
+                                     let ref =()=>{
+
+                                     } 
+                                     ref(); caller 
+  ==========================================================
+
+
+                                    4: anonymus function
+
+                                    a fucntion without name Arrow function and function expression wil act like anonymus function
+
+
+                                     syntax 
+
+                                     setTimeout( ()=>{
+
+
+                                     } , timeout in sec)    ;   
+
+
+
+                                     5:---
+                                     CAllback function 
+                                     =fucntion is passing through Arguments in another function 
+                                  
+      syntax:
+
+      function f1(){
+
+      }
+      functionf2(){
+
+      }
+      function mainfucntion(  var1,var2,function1,function2){
+      
+      }
+        mainfucntion(10,20,function1,function2);
+                            
+
+
+        call back hell/pyramid of demo
+        this is a situation where we have multiple call backs  inside a callback nested fucntion)
+        --hard to maintain the code / modify
+        ---hard to read 
+        ---hard to debug 
+
+
+        use : when are dealing with time is sunchronus code then it behaves like synchronus so we won;t template
+          get expected output ,to avoid this scenarios we can use call back hell and promises
+              /call back hell :calling function into another function using arrow function
+            // problem:issues lengthy code 
+            // make code diffcult to read
+                        step1(()=>{
+                            step2(()=>{
+                                step3(()=>{
+                                    step4();
+                                })
+                            });
+                        });
+
+            
+promises :-----
+==================
+it is an object ,used to handle with asynchronus operation
+
+states :=
+   1. pending ----starting /initial states
+   2.fulfilled --- if operation is success
+   3.Rejected=== if operation is failed 
+   promise can handle in two ways :
+   1.  then and catch 
+   then()---a function ,whihch is used to handle success of a promise 
+   catch()---a function ,which is used to deal with failure of a promise 
+
+
+   finally()--- a function,which executes even if we get success or failure 
+
+
+   2. async and await 
+
+   aync is a function which hold a promise
+   await is a keyword used to wait for a promise to resolve
+   await is used inside async function(mandatory )
+
+==========================================================================
+Objects:
+================
+--real world entity ,which is a combination of properties and functions 
+data is stored in the form of key and value pair
+object is enclsoed on{}
+syntax :
+    {
+      "key1" : value1,
+      "key2" : value2,
+    }
+
+    in javascript each and every object consist of a prototype
+    creation pf objects:
+    1: constructor function 
+    2:class and constructor
+    3: Object literal1
+    4:Object.create()
+
+================================================
+6 constructor function :
+ used to create object
+ object - real world entity
+ data is stored in the form of key value pair
+object is enclosed in{}
+syntax :
+    {
+      "key1" : value1,
+      "key2" : value2,
+    }
+
+syntax functionname (arg1,arg2,arg3.....){
+  this.arg1=arg1;
+  this.arg2=arg2;
+}
+
+
+new functionName(val1,val2,val3,val4.......)//caller
+
+note indicate the current object
+===============================================================
+
+2.class and constructor
+
+--it is a template for crating object 
+
+
+
+3, Object literal :(static way)
+syntax:
+    let varname ={
+      k1=v1,
+      k2=v2;
+    }
+
+
+4 :
+object.create():
+const obj={
+
+}
+
+
+let new Obj = obj.create(obj);
+it is a way of creating a new object based on existing object (Inheritance)
+thus ,it can share the properties and fucntion of an existing object
+
+
+prototype
+----------------
+it is a property of an object
+it allowsother  object to inherit /sharing properties and function 
+it helps to add new properties and function into object
+it helps to create a prototype chain between objects
+
+prototype chaining
+--it is chain of Objects
+it can achieve using object.create() 
+
+object methods 
+Object.keys()---keys in array foramt 
+Object.values()--- returns valeus in array format
+Object.entries()---returns keys- value pair in array foramat
+
+
+
+JSON :(Javascript object notation)
+
+it is a plain text ,lightweight data intercgange text
+used to store data (nosql) and exchange data (client<------> server)
+
+
+            js Objects                          JSON Object 
+    --------------------------------------------------------------
+    syntax       flexible and dynamic               fixed and static
+
+
+    keyquotes      optional                            mandatory
+    JSON Rules :
+    -key must be indicated with double quotes
+    --key must be unique
+    json object need to enclosed in {}
+    json array need to enclosed in []
+    
+=========================
+    json types :
+    -------
+   1 :json object
+    2 :json array 
+    3 :nestend json
+
+===============================================
+    accesing the values:
+    ---can access by using .notation or [] notation
+-======================================
+
+    re assigning /re initialize the value 
+    obj.key=new VAlue   or obj['key']=new value
+
+=================================
+    delete a value :
+    object obj.key   pr delete obj['key']
+
+==========================
+    merge of objects 
+    --merging /combining the objects using...(Spread operator)  or object.assign()
+
+
+    Note: while merging keys must be unique ,if same key present in the both the objects 
+
+================================================
+    adding the key value pair 
+    --use .notation or []  notaion  or ----(spread operator )
+ or object.assign
+
+============================================================
+ destructing the objects :
+ --it is a super way for accesing ,adding or assigning values ,renaming keys 
+ --it makes coede  cleaner ,reusablw ,simple 
+
+ syntax:
+ const user ={
+  "name" :"raj",
+
+  "email":"Shukla@gmail.com"
+
+ }
+ console.log(user.name);
+
+
+ let {name,email} = user;
+ console.log(name);
+
+ object methods 
+ --------------------
+Object.keys()---keys in array foramt 
+Object.values()--- returns valeus in array format
+Object.entries()---returns keys- value pair in array foramat
+===============================================
+
+
+Iterating object key-value pair:
+
+for in loop 
+syntax:
+     for(let key in obj){
+      //logic
+     }
+
+
+for each function 
+obj.foreach(
+  (key)=>{
+    //logic
+  }
+)
+
+
+
+
+
+
+
+
+===================================
+
+
+
+==========================================
+promise.race() :
+==================================
+--it collects multiple promises in array format 
+---it returns single result 
+---First win ,first value 
+-- it wont wait for all promises to complete first
+
+
+
+promise.all():
+=============================
+--it collects multiple promises in array format
+---it result promise s in array format, when all are in resolve state then only we get 
+array format
+--if any promsie is failed it executes catch block as errors
+
+
+promise.allSettled() :
+===================================
+---it collect multiple promise in array format 
+--it result promise in array format .in the form of object  which consist state and value 
+
+
+
+
+
+                            
+
+
+
+
+
+
+
+
+                                functionName()//caller 
+                                Note : without calling a function name it wont execute the code
+
+
+
+                                print sum and product of 1 to 10 natural numbers
+====================================================
+Types:
+function declaration
+function Expression
+arrow function
+anonymus function
+callback fucntion
+constructor\ function
+IIFE (immediately invoked fnction expression:)
+
+high order function
+
+
+
+7:IIFE(immediately invoked fnction expression:)
+  calling a function immediately after creating /declaring 
+
+  syntax:
+  
+  (
+      fucntion(){
+
+      }
+  )();
+
+
+
+  8:
+  Generator functiona function is used to generate values or create iterators/generators
+   syntax:
+    function* functionname (){
+      yield valaue1;
+      ....
+      yield = value2;
+
+    }
+    to access values from the  generator 
+    let generator ==functionName();
+    generator.next()---> returs data and value in object format 
+
+
+    9:
+    Higher order function
+     it is a function that allows another function as an argument 
+     and returns another  function a s return statement 
+
+     syntax:
+      function mainfunction(Arg1 ,arg 2,fun){
+        return fun(ar1,ar2);
+      }
+
+      function fun(arg1,arg2){
+        return arg + arg2;
+      }
+
+
+

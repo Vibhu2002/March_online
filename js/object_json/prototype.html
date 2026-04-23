@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <script>
+//prototype is a property in your object
+
+        // let Animal ={
+        //     color:'red'
+        // }
+        // console.log(Animal);//entire object used reference 
+        // console.log(Animal.color);//only value color will print 
+        // console.log(Animal.name);//undefine
+        // console.log(Animal.Color);//undefine
+        // Animal.color='brown';
+        // console.log(Animal.color);
+        // Animal.name='Cow';
+        // console.log(Animal.name);
+
+
+        function Student(Fname,Lname,yearofBirth)
+      { 
+        //data /properties/variable
+
+         this.Fname=Fname;
+         this.Lname=Lname;
+         this.yearofBirth=yearofBirth;
+         //functions
+
+
+         this.age=()=>{
+            return new Date().getFullYear()-this.yearofBirth;
+         }
+         
+        }
+        
+
+
+        let s1= new Student('Mangal','loii',1997);
+         console.log(s1);
+          console.log(s1.Fname);
+           console.log(s1.Lname);
+            console.log(s1.age());
+
+
+           
+           
+        // Student.prototype.fullname = function(){
+        //         return '${this.Fname} ${this.Lname}';//used single quotation
+        //    }
+            Student.prototype.fullname = function() {
+                   return `${this.Fname} ${this.Lname}`;//here used backtick 
+                   }
+
+            // Student.prototype.fullname = function() {
+            //     return `${this.Fname} ${this.Lname}` ;
+            // }
+
+            Student.prototype.email='thugesh@gmail.com';
+            console.log(s1.email);
+             console.log(s1.fullname());
+            
+          
+
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
